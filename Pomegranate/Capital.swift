@@ -1,0 +1,123 @@
+//
+//  Capital.swift
+//  Pomegranate
+//
+//  Created by Etienne Martin on 2023-07-20.
+//
+
+import Foundation
+
+struct Capital: Identifiable, Hashable {
+    var country: String
+    var name: String
+    var population: Int
+    var countryPercentage: Float
+    var id: String {
+        name
+    }
+    
+    // Data source: https://en.wikipedia.org/wiki/List_of_national_capitals_by_population
+    static var all: [Capital] = [
+        Capital(country: "China", name:"Beijing", population:21542000, countryPercentage:1.5),
+        Capital(country: "Japan", name:"Tokyo", population:13921000, countryPercentage:11.2),
+        Capital(country: "DR Congo", name:"Kinshasa", population:12691000, countryPercentage:13.2),
+        Capital(country: "Russia", name:"Moscow", population:12655050, countryPercentage:8.7),
+        Capital(country: "Indonesia", name:"Jakarta", population:10562088, countryPercentage:3.9),
+        Capital(country: "Egypt", name:"Cairo", population:10107125, countryPercentage:9.3),
+        Capital(country: "South Korea", name:"Seoul", population:9508451, countryPercentage:18.3),
+        Capital(country: "Mexico", name:"Mexico City", population:9209944, countryPercentage:7.3),
+        Capital(country: "United Kingdom", name:"London", population:9002488, countryPercentage:13.4),
+        Capital(country: "Bangladesh", name:"Dhaka", population:8906039, countryPercentage:5.3),
+        Capital(country: "Peru", name:"Lima", population:8852000, countryPercentage:26.3),
+        Capital(country: "Iran", name:"Tehran", population:8693706, countryPercentage:9.9),
+        Capital(country: "Thailand", name:"Bangkok", population:8305218, countryPercentage:11.6),
+        Capital(country: "Vietnam", name:"Hanoi", population:8053663, countryPercentage:8.3),
+        Capital(country: "Iraq", name:"Baghdad", population:7682136, countryPercentage:17.6),
+        Capital(country: "Saudi Arabia", name:"Riyadh", population:7676654, countryPercentage:21.4),
+        Capital(country: "Hong Kong", name:"Hong Kong", population:7291600, countryPercentage:100),
+        Capital(country: "Colombia", name:"Bogotá", population:7181469, countryPercentage:13.9),
+        Capital(country: "Chile", name:"Santiago", population:6310000, countryPercentage:32.4),
+        Capital(country: "Turkey", name:"Ankara", population:5747325, countryPercentage:6.8),
+        Capital(country: "Singapore", name:"Singapore", population:5453600, countryPercentage:91.8),
+        Capital(country: "Afghanistan", name:"Kabul", population:4601789, countryPercentage:11.5),
+        Capital(country: "Kenya", name:"Nairobi", population:4397073, countryPercentage:8.3),
+        Capital(country: "Jordan", name:"Amman", population:4061150, countryPercentage:36.4),
+        Capital(country: "Algeria", name:"Algiers", population:3915811, countryPercentage:8.9),
+        Capital(country: "Germany", name:"Berlin", population:3677472, countryPercentage:4.4),
+        Capital(country: "Spain", name:"Madrid", population:3305408, countryPercentage:7.0),
+        Capital(country: "Ethiopia", name:"Addis Ababa", population:3040740, countryPercentage:2.5),
+        Capital(country: "Kuwait", name:"Kuwait City", population:2989000, countryPercentage:70.3),
+        Capital(country: "Guatemala", name:"Guatemala City", population:2934841, countryPercentage:16.7),
+        Capital(country: "South Africa", name:"Pretoria", population:2921488, countryPercentage:4.9),
+        Capital(country: "Ukraine", name:"Kyiv", population:2920873, countryPercentage:6.7),
+        Capital(country: "Argentina", name:"Buenos Aires", population:2891082, countryPercentage:6.4),
+        Capital(country: "North Korea", name:"Pyongyang", population:2870000, countryPercentage:11.1),
+        Capital(country: "Uzbekistan", name:"Tashkent", population:2860600, countryPercentage:8.4),
+        Capital(country: "Italy", name:"Rome", population:2761632, countryPercentage:4.7),
+        Capital(country: "Ecuador", name:"Quito", population:2800388, countryPercentage:15.7),
+        Capital(country: "Cameroon", name:"Yaoundé", population:2765568, countryPercentage:10.2),
+        Capital(country: "Zambia", name:"Lusaka", population:2731696, countryPercentage:14.0),
+        Capital(country: "Sudan", name:"Khartoum", population:2682431, countryPercentage:5.9),
+        Capital(country: "Brazil", name:"Brasília", population:2648532, countryPercentage:1.2),
+        Capital(country: "Taiwan", name:"Taipei (de facto)", population:2608332, countryPercentage:10.9),
+        Capital(country: "Yemen", name:"Sanaa", population:2575347, countryPercentage:7.8),
+        Capital(country: "Angola", name:"Luanda", population:2571861, countryPercentage:7.5),
+        Capital(country: "Burkina Faso", name:"Ouagadougou", population: 2453496, countryPercentage:11.1),
+        Capital(country: "Ghana", name:"Accra", population:2388000, countryPercentage:7.3),
+        Capital(country: "Somalia", name:"Mogadishu", population:2388000, countryPercentage:14.0),
+        Capital(country: "Azerbaijan", name:"Baku", population:2303100, countryPercentage:22.3),
+        Capital(country: "Cambodia", name:"Phnom Penh", population:2281951, countryPercentage:13.8),
+        Capital(country: "Venezuela", name:"Caracas", population:2245744, countryPercentage:8.0),
+        Capital(country: "France", name:"Paris", population:2139907, countryPercentage:3.3),
+        Capital(country: "Cuba", name:"Havana", population:2132183, countryPercentage:18.9),
+        Capital(country: "Zimbabwe", name:"Harare", population:2123132, countryPercentage:13.3),
+        Capital(country: "Syria", name:"Damascus", population:2079000, countryPercentage:9.7),
+        Capital(country: "Belarus", name:"Minsk", population:1996553, countryPercentage:20.8),
+        Capital(country: "Austria", name:"Vienna", population:1962779, countryPercentage:22.0),
+        Capital(country: "Poland", name:"Warsaw", population:1863056, countryPercentage:4.9),
+        Capital(country: "Philippines", name:"Manila", population:1846513, countryPercentage:1.6),
+        Capital(country: "Mali", name:"Bamako", population:1809106, countryPercentage:8.3),
+        Capital(country: "Malaysia", name:"Kuala Lumpur", population:1782500, countryPercentage:5.3),
+        Capital(country: "Romania", name:"Bucharest", population:1716983, countryPercentage:8.9),
+        Capital(country: "Hungary", name:"Budapest", population:1706851, countryPercentage:17.6),
+        Capital(country: "Congo", name:"Brazzaville", population:1696392, countryPercentage:29.1),
+        Capital(country: "Serbia", name:"Belgrade", population:1688667, countryPercentage:23.1),
+        Capital(country: "Uganda", name:"Kampala", population:1680600, countryPercentage:3.7),
+        Capital(country: "Guinea", name:"Conakry", population:1660973, countryPercentage:12.3),
+        Capital(country: "Mongolia", name:"Ulaanbaatar", population:1466125, countryPercentage:43.8),
+        Capital(country: "Honduras", name:"Tegucigalpa", population:1444085, countryPercentage:14.0),
+        Capital(country: "Senegal", name:"Dakar", population:1438725, countryPercentage:8.5),
+        Capital(country: "Czech Republic", name:"Prague", population:1357326, countryPercentage:12.9),
+        Capital(country: "Niger", name:"Niamey", population:1334984, countryPercentage:5.3),
+        Capital(country: "Uruguay", name:"Montevideo", population:1319108, countryPercentage:38.5),
+        Capital(country: "Bulgaria", name:"Sofia", population:1307439, countryPercentage:19.0),
+        Capital(country: "Oman", name:"Muscat", population:1294101, countryPercentage:28.6),
+        Capital(country: "Madagascar", name:"Antananarivo", population:1275207, countryPercentage:4.4),
+        Capital(country: "Kazakhstan", name:"Astana", population:1239900, countryPercentage:6.5),
+        Capital(country: "Nigeria", name:"Abuja", population:1235880, countryPercentage:0.6),
+        Capital(country: "Georgia", name:"Tbilisi", population:1201769, countryPercentage:32.0),
+        Capital(country: "Mauritania", name:"Nouakchott", population:1195600, countryPercentage:25.9),
+        Capital(country: "Qatar", name:"Doha", population:1186023, countryPercentage:44.1),
+        Capital(country: "Libya", name:"Tripoli", population:1170000, countryPercentage:17.4),
+        Capital(country: "Myanmar", name:"Naypyidaw", population:1160242, countryPercentage:2.2),
+        Capital(country: "Rwanda", name:"Kigali", population:1132686, countryPercentage:8.4),
+        Capital(country: "Mozambique", name:"Maputo", population:1124988, countryPercentage:3.5),
+        Capital(country: "Dominican Republic", name:"Santo Domingo", population:1111838, countryPercentage:10.0),
+        Capital(country: "Armenia", name:"Yerevan", population:1096100, countryPercentage:39.3),
+        Capital(country: "Kyrgyzstan", name:"Bishkek", population:1074075, countryPercentage:16.5),
+        Capital(country: "Sierra Leone", name:"Freetown", population:1055964, countryPercentage:12.5),
+        Capital(country: "Nicaragua", name:"Managua", population:1055247, countryPercentage:15.4),
+        Capital(country: "Canada", name:"Ottawa", population:1017449, countryPercentage:2.7),
+        Capital(country: "Pakistan", name:"Islamabad", population:1014825, countryPercentage:0.4),
+        Capital(country: "Liberia", name:"Monrovia", population:1010970, countryPercentage:19.5),
+        Capital(country: "United Arab Emirates", name:"Abu Dhabi", population:1010092, countryPercentage:10.8),
+        Capital(country: "Malawi", name:"Lilongwe", population:989318, countryPercentage:5.0),
+        Capital(country: "Haiti", name:"Port-au-Prince", population:987310, countryPercentage:8.6),
+        Capital(country: "Sweden", name:"Stockholm", population:978770, countryPercentage:9.4),
+        Capital(country: "Eritrea", name:"Asmara", population:963000, countryPercentage:26.6),
+        Capital(country: "Israel", name:"Jerusalem[a]", population:936425, countryPercentage:10.5),
+        Capital(country: "Laos", name:"Vientiane", population:927724, countryPercentage:12.5),
+        Capital(country: "Chad", name:"N'Djamena", population:916000, countryPercentage:5.3),
+    ]
+}
+
